@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/111ce23cc6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>New Year Party!</title>
+    <link rel="icon" href="imgs/party icon.png">
+</head>
+
+<body id="body">
+    <div class="sidebar">
+        <ul>
+            <li><a class="" href="#body">Home</a></li>
+            <li><a class="" href="#Schedule">Schedule</a></li>
+            <li><a class="" href="#CountDown">When?</a></li>
+            <li><a class="" href="#Contact">Contact</a></li>
+        </ul>
+        <div class="sidebarbtn">
+            <span></span>
+        </div>
+    </div>
+    <div class="nav-logo text-center">
+            <a class="logo" href="#">New Year Party</a>
+    </div>
+    <section class="Header container d-flex justify-content-between align-items-center mt-5" id="home">
+        <div class="row">
+            <div class="col-6 align-self-center">
+                <h2>Let’s Get the Party <span>Started.</span></h2>
+                <button class="button-b mt-3" role="button">Book Your Ticket!</button>
+            </div>
+            <div class="col-6 ms-auto">
+                <img src="imgs/vishnu-r-nair-m1WZS5ye404-unsplash.jpg" alt="" class="w-100">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="Details container" id="Schedule">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2>Schedule</h2>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ul class="accordion text-center">
+                            <li class="accordion-item ">
+                                <h3 class="accordion-thumb">Opening</h3>
+                                <p class="accordion-panel">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    elit. Placeat, quibusdam! Voluptate nobis, beatae
+                                    tempora praesentium, illum quis illo, maiores quod
+                                    similique placeat, saepe mollitia dolor officiis
+                                    aspernatur deleniti debitis commodi!
+                                </p>
+                            </li>
+                            <li class="accordion-item">
+                                <h3 class="accordion-thumb">Greetings</h3>
+                                <p class="accordion-panel">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    elit. Reprehenderit quos, accusamus! Enim labore totam
+                                    dicta quibusdam? Eveniet quis asperiores reprehenderit
+                                    eaque atque in iure voluptate, explicabo, placeat, id
+                                    earum architecto!
+                                </p>
+                            </li>
+                            <li class="accordion-item">
+                                <h3 class="accordion-thumb">Karaoke</h3>
+                                <p class="accordion-panel">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    elit. Reprehenderit quos, accusamus! Enim labore
+                                    totam dicta quibusdam? Eveniet quis asperiores
+                                    reprehenderit eaque atque in iure voluptate,
+                                    explicabo, placeat, id earum architecto!
+                                </p>
+                            </li>
+                            <li class="accordion-item">
+                                <h3 class="accordion-thumb">Dance</h3>
+                                <p class="accordion-panel">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    elit. Reprehenderit quos, accusamus! Enim labore
+                                    totam dicta quibusdam? Eveniet quis asperiores
+                                    reprehenderit eaque atque in iure voluptate,
+                                    explicabo, placeat, id earum architecto!
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section>
+        <div class="CountDown container" id="CountDown">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2>Countdown</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center d-flex justify-content-center align-items-center">
+                    <div class="card">
+                        <div class="card-body" id="day">
+                            120
+                        </div>
+                        <p>Days</p>
+                    </div>
+                    <div class="divider">:</div>
+                    <div class="card">
+                        <div class="card-body" id="hours">
+                            23
+                        </div>
+                        <p>Hours</p>
+                    </div>
+                    <div class="divider">:</div>
+                    <div class="card">
+                        <div class="card-body" id="min">
+                            55
+                        </div>
+                        <p>Minutes</p>
+                    </div>
+                    <div class="divider">:</div>
+                    <div class="card">
+                        <div class="card-body" id="sec">
+                            18
+                        </div>
+                        <p>Seconds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="Contacts container" id="Contact">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2>Contact Us</h2>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="container w-75">
+                    <div class="form-group mb-5 text-center">
+                        <input type="text" class="form-control mb-4" placeholder="Name">
+                        <input type="email" class="form-control mb-4 mt-4" placeholder="Email">
+                        <textarea id="countDown" class="form-control mt-4" placeholder="Message" rows="5"></textarea>
+                        <span id="count2" class="float-right">100</span>
+                        <button class="button-c mt-4" type="submit">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <div class="footer-basic">
+        <footer>
+            <div class="social">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#body">Home</a></li>
+                <li class="list-inline-item"><a href="#Schedule">Schedule</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Party © 2023</p>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="jquery.countdown.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

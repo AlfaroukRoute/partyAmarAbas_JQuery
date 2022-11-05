@@ -1,0 +1,401 @@
+@font-face {
+    font-family: 'LufgaRegular';
+    src: url('font/lufga-cufonfonts/LufgaRegular.ttf')
+}
+
+@font-face {
+    font-family: 'LufgaLight';
+    src: url('font/lufga-cufonfonts/LufgaLight.ttf')
+}
+
+@font-face {
+    font-family: 'LufgaBold';
+    src: url('font/lufga-cufonfonts/LufgaBold.ttf')
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'LufgaRegular';
+}
+
+/* sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #000;
+    width: 250px;
+    height: 100%;
+    transition: .3s;
+    z-index: 10;
+}
+
+.show {
+    left: 0;
+}
+
+.sidebar ul {
+    margin: 0;
+    padding: 20px 0px;
+}
+
+.sidebar ul li {
+    list-style: none;
+}
+
+.sidebar a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 10px 20px;
+    color: #ccc;
+    display: block;
+    border-bottom: 1px solid rgba(126, 125, 125, 0.25);
+}
+
+.sidebar a:hover {
+    color: rgba(226, 61, 19, 0.836);
+}
+
+.sidebarbtn {
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+
+.sidebarbtn span {
+    display: block;
+    width: 35px;
+    height: 3px;
+    background: #000;
+    position: absolute;
+    top: 24px;
+    left: 5px;
+    transition: .3s;
+}
+
+.sidebarbtn span::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    width: 100%;
+    height: 3px;
+    background: rgba(226, 61, 19, 0.836);
+    transition: .3s;
+}
+
+.sidebarbtn span::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    width: 100%;
+    height: 3px;
+    background: rgba(226, 61, 19, 0.836);
+    transition: .3s;
+}
+
+.sidebarbtn.toggle span {
+    background: transparent;
+}
+
+.sidebarbtn.toggle span::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.sidebarbtn.toggle span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+
+/* navbar */
+.logo {
+    text-decoration: none;
+    font-family: 'LufgaBold';
+    color: rgba(226, 61, 19, 0.836);
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 44px;
+}
+
+.logo:hover {
+    color: rgba(238, 78, 38, 0.836);
+}
+
+
+/* header */
+
+.Header h2 {
+    font-style: normal;
+    font-size: 50px;
+}
+
+.Header span {
+    font-family: 'LufgaBold';
+    background: -webkit-linear-gradient(90deg, rgba(255, 6, 6, 1) 35%, rgba(230, 241, 9, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+img {
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+.button-b {
+    width: 150px;
+    appearance: none;
+    background-color: #000000;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+.button-b:disabled {
+    pointer-events: none;
+}
+
+.button-b:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.button-b:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+/* details */
+.Details h2 {
+    font-family: 'LufgaBold';
+    font-size: 60px;
+    font-weight: 500;
+    margin-top: 80px;
+    text-transform: uppercase;
+}
+
+/* accordion */
+.accordion {
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid #e5e5e5;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion-thumb {
+    margin: 0;
+    padding: 0.8rem 0;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.accordion-thumb::before {
+    content: "";
+    display: inline-block;
+    height: 7px;
+    width: 7px;
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    transform: rotate(-45deg);
+    transition: transform 0.2s ease-out;
+}
+
+.accordion-panel {
+    margin: 0;
+    padding-bottom: 0.8rem;
+    display: none;
+}
+
+.accordion-item.is-active .accordion-thumb::before {
+    transform: rotate(45deg);
+}
+
+/* Countdown */
+.CountDown h2 {
+    font-family: 'LufgaBold';
+    font-size: 60px;
+    font-weight: 500;
+    margin: 20px 0px;
+    text-transform: uppercase;
+}
+
+.card {
+    --bs-card-border-width: none;
+    margin-bottom: 20px;
+}
+
+.card-body {
+    font-family: 'LufgaLight';
+    font-size: 90px;
+    font-weight: 400;
+    margin-top: 70px;
+    padding: 0px 10px;
+}
+
+.card p {
+    text-transform: lowercase;
+}
+
+.divider {
+    font-size: 65px;
+    margin: 0px 30px;
+    color: rgba(238, 78, 38, 0.836);
+}
+
+/* Contact us */
+.Contacts h2 {
+    font-family: 'LufgaBold';
+    font-size: 60px;
+    font-weight: 500;
+    margin: 50px 0px;
+    text-transform: uppercase;
+}
+
+.form-control:hover{
+    border-color: rgba(238, 78, 38, 0.836);
+}
+
+.float-right {
+    float: right;
+}
+
+#count2 {
+    color: grey
+}
+
+.button-c {
+    width: 100px;
+    appearance: none;
+    background-color: rgba(226, 61, 19, 0.836);
+    border-radius: 15px;
+    border: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin: 0;
+    min-height: 30px;
+    min-width: 0;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+.button-c:disabled {
+    pointer-events: none;
+}
+
+.button-c:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.button-c:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+/*footer*/
+.footer-basic {
+    padding: 40px 0;
+    background-color: #000000;
+    color: #4b4c4d;
+}
+
+.footer-basic ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.footer-basic li {
+    padding: 0 10px;
+}
+
+.footer-basic ul a {
+    color: #aaa;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+    opacity: 1;
+    color: rgba(238, 78, 38, 0.836);
+}
+
+.footer-basic .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: #FFFFFF;
+}
+
+.footer-basic .social>a {
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin: 0 8px;
+    color: inherit;
+    opacity: 0.75;
+}
+
+.footer-basic .social>a:hover {
+    opacity: 0.9;
+    color: rgba(238, 78, 38, 0.836);
+}
+
+
+.footer-basic .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 0;
+}
